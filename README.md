@@ -16,3 +16,9 @@ Meus objetivos a serem alcançados a desenvolver este projeto:
 - Validar dados de entrada e tratar erros que existiram;
 - Melhor minha capacidade de organização do código;
 - Aplicar cálculos simples;
+
+
+Aprendizados:
+- Configuração do ambiente para criação do banco de dados;
+- Criação de banco de dados através do Schema;
+
