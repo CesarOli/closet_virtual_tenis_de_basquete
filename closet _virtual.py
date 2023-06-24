@@ -6,3 +6,6 @@ conexao = mysql.connector.connect(
     password = ' 6joiasthanos',
     database = 'closet_virtual'
 )
+# Verificando conexão
+if conexao.is_connected():
+    print('Conexão estabelecida com sucesso!!')
