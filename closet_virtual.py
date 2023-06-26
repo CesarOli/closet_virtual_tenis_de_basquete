@@ -13,9 +13,10 @@ if conexao.is_connected():
     print('Aguardando conexão ao banco de dados...')
     sleep(1.1)
     print('Conexão estabelecida com sucesso!!')
-'''
+
 cursor = conexao.cursor()
-sql = """
+'''sql = 
+
 CREATE TABLE Tenis (
     id INT AUTO_INCREMENT PRIMARY KEY,
     `Nome do Tenis` VARCHAR(100),
@@ -25,23 +26,35 @@ CREATE TABLE Tenis (
     `Ano do Lancamento` YEAR,
     Valor DECIMAL(10, 2),
     Quantidade_Estoque INT
-)
-"""
+)"""'''
 
-cursor.execute(sql)'''
+sql = ''
+cursor.execute(sql)
 
-cursor = conexao.cursor()
+def adicionarColunaLinha():
+    sql = "ALTER TABLE Tenis ADD COLUMN Linha VARCHAR(50)"
+    cursor.execute(sql)
+    print('Coluna "Linha" adiciona com sucesso!')
+
 sql = 'DESCRIBE Tenis'
 cursor.execute(sql)
 resultados = cursor.fetchall()
+colunas = [coluna[0] for coluna in resultados]
 
 cursor.execute("SELECT * FROM Tenis")
+result = cursor.fetchall()
+
+if 'Linha' not in colunas:
+    adicionarColunaLinha()
+
+sql = 'SELECT  * FROM Tenis'
+cursor.execute(sql)
 result = cursor.fetchall()
 
 print('Abrindo seu Closet Virtual...', '\n')
 sleep(2.5)
 print("=" * 90)
-print("{:<5} {:<20} {:<15} {:<10} {:<10} {:<10} {:<10}".format("ID", "Nome do Tênis", "Marca", "Numeração", "Cor", "Ano", "Valor"))
+print("{:<5} {:<20} {:<15} {:<10} {:<10} {:<10} {:<10}".format("ID", "Nome do Tênis", "Marca", "Linha", "Numeração", "Cor", "Ano", "Valor"))
 print("=" * 90)
 
 for row in result:
