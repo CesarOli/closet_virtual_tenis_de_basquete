@@ -14,5 +14,20 @@ if conexao.is_connected():
     sleep(1.1)
     print('Conexão estabelecida com sucesso!!')
 
-
+cursor = conexao.cursor()
+sql = """
+CREATE TABLE Tenis (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    Nome do Tenis VARCHAR(100),
+    Marca VARCHAR(50),
+    Numeracao DECIMAL(3, 2),
+    Cor VARCHAR(50),
+    Ano_Lancamento(YEAR),
+    Valor DECIMAL(10, 2)
+    Quantidade_Estoque INT
+)
+"""
+cursor.execute(sql)
+conexao.commit()
+conexao.close()
 
