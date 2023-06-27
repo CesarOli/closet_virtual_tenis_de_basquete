@@ -36,6 +36,20 @@ def adicionarColunaLinha():
     cursor.execute(sql)
     print('Coluna "Linha" adiciona com sucesso!')
 
+def adicionarNovoTenis():
+    nome = input('Nome do Tênis: ')
+    marca = input('Marca do Tênis: ')
+    numeracao = (float(input('Numeração: ')))
+    cor = input('Cor: ')
+    ano = ('Ano de Lançamento: ')
+    valor = float(input('Valor do Tênis: '))
+    quantidade = ('Quantidade deste modelo em estoque: ')
+    #colocar opções de menu: Kobe, Air Jordan, e demais linhas
+    linha = input('Linha do Tênis: ')
+    
+    cursor = conexao.cursor()
+    sql = "INSERT INTO Tenis (`Nome do Tenis`, Marca, Numeracao, Cor, `Ano do Lancamento`, Valor, Quantidade_Estoque, Linha) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+
 sql = 'DESCRIBE Tenis'
 cursor.execute(sql)
 resultados = cursor.fetchall()
