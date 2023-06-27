@@ -7,6 +7,14 @@ conexao = mysql.connector.connect(
     password = '6joiasthanos',
     database = 'closet_virtual'
 )
+
+def menuPrincipal():
+    print("Bem-vindo ao Closet Virtual!")
+    print("Selecione uma opção:")
+    print("1. Conectar ao Banco de Dados")
+    print("2. Visualizar Closet Virtual")
+    print("0. Sair")
+
 # Verificando conexão
 if conexao.is_connected():
     sleep(2.5)
@@ -50,6 +58,7 @@ def adicionarNovoTenis():
     cursor = conexao.cursor()
     sql = "INSERT INTO Tenis (`Nome do Tenis`, Marca, Numeracao, Cor, `Ano do Lancamento`, Valor, Quantidade_Estoque, Linha) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
 
+
 sql = 'DESCRIBE Tenis'
 cursor.execute(sql)
 resultados = cursor.fetchall()
@@ -76,8 +85,10 @@ for row in result:
     print("{:<5} {:<20} {:<15} {:<10} {:<10} {:<10} R${:<10.2f}".format(row[0], row[1], row[2], row[3], row[4], row[5], row[6]))
 
 sleep(1.5)
-print('\n', 'Fim do Programa!!')
+
+menuPrincipal()
 conexao.commit()
 conexao.close()
 
+print('\n', 'Fim do Programa!!')
 
