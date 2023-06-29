@@ -8,7 +8,19 @@ config = {
     'password': 'SENHA_DESEJADA',
     'database': 'closet_virtual'
 }
+conectar = None
 
+def conectarBancoDados():
+    global conectar
+    conectar = mysql.connector.connect(**config)
+    if conectar.is_connected():
+        sleep(2)
+        print('Conexão ao banco de dados realizada com sucesso.')
+    else:
+        sleep(2)
+        print('Falha na conexão.')
+
+conectarBancoDados()
 
 '''def menuPrincipal():
     print('Bem-vindo ao Closet Virtual!')
