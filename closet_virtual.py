@@ -2,6 +2,14 @@ import mysql.connector
 import requests
 from time import sleep
 
+config = { 
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'SENHA_DESEJADA',
+    'database': 'closet_virtual'
+}
+
+
 '''def menuPrincipal():
     print('Bem-vindo ao Closet Virtual!')
     print('Selecione uma opção:')
