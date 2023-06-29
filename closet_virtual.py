@@ -1,31 +1,22 @@
 import mysql.connector
+import requests
 from time import sleep
 
-conexao = mysql.connector.connect(
-    host = 'localhost',
-    user = 'CesarOli',
-    password = '6joiasthanos',
-    database = 'closet_virtual'
-)
-
-def menuPrincipal():
-    print("Bem-vindo ao Closet Virtual!")
-    print("Selecione uma opção:")
-    print("1. Conectar ao Banco de Dados")
-    print("2. Visualizar Closet Virtual")
+'''def menuPrincipal():
+    print('Bem-vindo ao Closet Virtual!')
+    print('Selecione uma opção:')
+    print('1. Conectar ao Banco de Dados')
+    print('2. Visualizar Closet Virtual')
+    print('3. Adicionar Novo Tênis')
     print("0. Sair")
 
+
+
 # Verificando conexão
-if conexao.is_connected():
-    sleep(2.5)
-    print('Aguardando conexão ao banco de dados...')
-    sleep(1.1)
-    print('Conexão estabelecida com sucesso!!')
+
 
 cursor = conexao.cursor()
-'''sql = 
-
-CREATE TABLE Tenis (
+sql = """CREATE TABLE Tenis (
     id INT AUTO_INCREMENT PRIMARY KEY,
     `Nome do Tenis` VARCHAR(100),
     Marca VARCHAR(50),
@@ -34,9 +25,8 @@ CREATE TABLE Tenis (
     `Ano do Lancamento` YEAR,
     Valor DECIMAL(10, 2),
     Quantidade_Estoque INT
-)"""'''
+)"""
 
-sql = ''
 cursor.execute(sql)
 
 def adicionarColunaLinha():
@@ -90,5 +80,5 @@ menuPrincipal()
 conexao.commit()
 conexao.close()
 
-print('\n', 'Fim do Programa!!')
+print('\n', 'Fim do Programa!!')'''
 
