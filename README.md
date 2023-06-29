@@ -19,6 +19,12 @@ Meus objetivos a serem alcançados a desenvolver este projeto:
 
 
 Aprendizados:
-- Configuração do ambiente para criação do banco de dados;
-- Criação de banco de dados através do Schema;
+- Instalação do sistema operacional Linux;
+- Criação, configuração e gerenciamento de ambientes virtuais;
+- Manipulação de comandos com 'superpoderes', que podem alterar informações de qualquer usuário;
+- Ativação e desativação do ambiente virtual criado;
+- Criação, edição e manipulação do arquivo requirements;
+- Instalação de libs requirements
+
+
 
