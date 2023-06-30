@@ -25,18 +25,24 @@ def conectarBancoDados():
         print('Falha na conexão.')
 
 conectarBancoDados()
-
 cursor = conectar.cursor()
 
-criarTabelaTenis = '''CREATE TABLE Tenis (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    marca VARCHAR(50),
-    numeracao VARCHAR(10),
-    linha VARCHAR(50)
-)'''
-cursor.execute(criarTabelaTenis)
+def verificaExisteTabelaTenis(cursor):
+    cursor.execute("SHOW TABLES LIKE 'Tenis'")
 
+    if cursor.fetchone():
+        print("A tabela 'Tenis' já existe.")
+    else:
+        criarTabelaTenis = '''CREATE TABLE Tenis (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(100),
+        marca VARCHAR(50),
+        numeracao VARCHAR(10),
+        linha VARCHAR(50)
+        )'''
+        cursor.execute(criarTabelaTenis)
+
+verificaExisteTabelaTenis(cursor)
 
 '''def menuPrincipal():
     print('Bem-vindo ao Closet Virtual!')
@@ -115,6 +121,7 @@ sleep(1.5)
 menuPrincipal()
 conexao.commit()
 conexao.close()'''
+verificaExisteTabelaTenis(cursor)
 sleep(2)
 print('\n', 'Fim do Programa!!')
 
