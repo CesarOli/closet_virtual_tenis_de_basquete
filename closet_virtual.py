@@ -15,6 +15,10 @@ def conectarBancoDados():
     conectar = mysql.connector.connect(**config)
     if conectar.is_connected():
         sleep(2)
+        print('Aguarde...Estabelecendo conexão ao bando de dados.')
+        sleep(1.5)
+        print('...')
+        sleep(1)
         print('Conexão ao banco de dados realizada com sucesso.')
     else:
         sleep(2)
@@ -98,7 +102,7 @@ sleep(1.5)
 
 menuPrincipal()
 conexao.commit()
-conexao.close()
-
-print('\n', 'Fim do Programa!!')'''
+conexao.close()'''
+sleep(2)
+print('\n', 'Fim do Programa!!')
 
