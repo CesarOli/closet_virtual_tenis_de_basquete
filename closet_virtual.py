@@ -41,19 +41,28 @@ def verificaExisteTabelaTenis(cursor):
         linha VARCHAR(50)
         )'''
         cursor.execute(criarTabelaTenis)
+        print("A tabela 'Tenis' já existe.")
 
 verificaExisteTabelaTenis(cursor)
 
-'''def menuPrincipal():
+def menuPrincipal():
     print('Bem-vindo ao Closet Virtual!')
-    print('Selecione uma opção:')
-    print('1. Conectar ao Banco de Dados')
-    print('2. Visualizar Closet Virtual')
-    print('3. Adicionar Novo Tênis')
-    print("0. Sair")
+    while True:
+        print('Selecione uma opção:')
+        print('1. Adicione seu Novo Tênis')
+        print("0. Sair")
 
+        opcao = input('Digite o número da opção desejada: ')
 
+        if opcao == '1':
+          # adicionarNovoTenis()
+        elif opcao == '0':
+            print('Obrigado por usar o Closet Virtual! Até mais!')
+            break
+        else:
+            print('Opção inválida. Por favor, selecione uma opção válida.')
 
+'''
 # Verificando conexão
 
 
@@ -121,7 +130,6 @@ sleep(1.5)
 menuPrincipal()
 conexao.commit()
 conexao.close()'''
-verificaExisteTabelaTenis(cursor)
 sleep(2)
 print('\n', 'Fim do Programa!!')
 
