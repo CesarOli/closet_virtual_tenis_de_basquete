@@ -26,6 +26,18 @@ def conectarBancoDados():
 
 conectarBancoDados()
 
+cursor = conectar.cursor()
+
+criarTabelaTenis = '''CREATE TABLE Tenis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    marca VARCHAR(50),
+    numeracao VARCHAR(10),
+    linha VARCHAR(50)
+)'''
+cursor.execute(criarTabelaTenis)
+
+
 '''def menuPrincipal():
     print('Bem-vindo ao Closet Virtual!')
     print('Selecione uma opção:')
