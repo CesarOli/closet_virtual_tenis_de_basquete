@@ -26,5 +26,13 @@ Aprendizados:
 - Criação, edição e manipulação do arquivo requirements;
 - Instalação de libs requirements
 
+=======================================================================================================
+
+Para o inclusão de um modelo de tênis você precisa:
+- Ter o Visual Studio Code instalado em sua máquina;
+- Clonar o repositório com o código finalizado;
+- Digitar o seguinte comando no terminal 'python3 closet_virtual.py;
+- Apertar a tecla 'enter';
+- Seguira interação;
 
 
