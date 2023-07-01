@@ -35,4 +35,9 @@ Para o inclusão de um modelo de tênis você precisa:
 - Apertar a tecla 'enter';
 - Seguira interação;
 
-
+Para instalação do MySQL no Linux Ubuntu, você precisa: 
+ - Abrir o terminal:
+ - Digite o comando 'sudo apt update';
+ - Em seguida, digite o comando 'sudo apt install mysql-server';
+ - Será necessário definir a senha de acesso ao MySQL;
+ 
