@@ -49,3 +49,15 @@ Para instalação do MySQL no Windows, você precisa;
  - Clicar em todos os 'Avançar', em algum momento, será necessário definir uma senha;
  - Ao terminar, abra o terminal e digite o comando 'mysql -u root -p', isso solicitará a senha que você definiu na fase anterior;
  - Estando ok, você receberá uma mensagem de boas vindas ao banco de dados MySQL;
+
+
+Para visualizar o Closet Virtual de Tênis de Basquete, você precisa;
+ - Abrir o terminal;
+ - Digitar o comando 'mysql -u root -p';
+ - Digitar a senha definida no momento da instalação do MySQL;
+ - Será exibida uma mensagem de boas vindas;
+ - Digite o comando 'USE closet_virtual';
+ - Digite o comando 'SELECT * FROM Tenis;'; 
+ 
+ O Closet será exibido em sua tela com as informações definidas na tabela.
+
