@@ -41,3 +41,11 @@ Para instalação do MySQL no Linux Ubuntu, você precisa:
  - Em seguida, digite o comando 'sudo apt install mysql-server';
  - Será necessário definir a senha de acesso ao MySQL;
  
+
+Para instalação do MySQL no Windows, você precisa;
+ - Entrar no site https://www.mysql.com/, em Downloads;
+ - Clicar em 'MySQL Community Server' e na mesma seção clicar em 'MySQL Installer for Windows';
+ - Aguarde a instalação e execute o arquivo baixado;
+ - Clicar em todos os 'Avançar', em algum momento, será necessário definir uma senha;
+ - Ao terminar, abra o terminal e digite o comando 'mysql -u root -p', isso solicitará a senha que você definiu na fase anterior;
+ - Estando ok, você receberá uma mensagem de boas vindas ao banco de dados MySQL;
